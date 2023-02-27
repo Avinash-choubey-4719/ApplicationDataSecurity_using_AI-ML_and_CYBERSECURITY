@@ -172,11 +172,20 @@ The next step is the training of the 2 models. Each is trained separately with t
 
 Then, after completing the prediction process, divide the distance of each sample by the maximum distance calculated in the training and what emerges is a good estimate of the probability that the investigated sample belongs to the class of the actual user or to the class of the malicious user. Once the execution of the 2 models is completed, the process of combining the results of the models follows. During the combination, for each sample, the above estimate from the 2 models is added and if the sum value is positive the sample is categorized as a real user otherwise as a malicious user.
 
-## Evaluation Metrics
+# EVALUTIONG METRICS
+Evaluation is always good in any field right! In the case of machine learning, it is best the practice. In this post, I will almost cover all the popular as well as common metrics used for machine learning.
 
-Performance metrics are measures that quantify the performance of a machine learning model. The problem with this categorization is the classification of an initially unknown sample into one of two possible categories, that of the original user and that of the attacher one. As a result, there are 2 classes. The value 1 symbolizes the original user of the mobile phone, while the value -1 symbolizes the malicious user. Algorithms are trained in only one class, that of the original user. Therefore, any unknown sample that matches the distribution of the actual user data takes the value 1, otherwise the value -1. 
+Confusion Matrix
+Classification Accuracy.
+Logarithmic loss.
+Area under Curve.
+F1 score.
+Mean Absolute Error.
+Mean Squared Error.
 
-The primary goal of the continuous user authentication problem is to minimize **FAR**, the percentage of unknown users or intruders who are incorrectly classified as the original user and thus gain access to the device with unknown consequences. At the same time, it is also very important to minimize **FRR** as much as possible. The FRR measures the percentage of cases in which the original user is not recognized by the model and is therefore prohibited from using the device until it is switched on again. In addition, the **Confusion Matrix**, **Accuracy** and **F1-Score** metrics were used.
+Using the above evalution metrics, we are able to get the performance of our model and better accuracy.
+
+
 
 # Conclusions
 
